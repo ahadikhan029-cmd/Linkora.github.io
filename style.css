@@ -1,57 +1,90 @@
+/* GENERAL STYLES */
 body {
   margin: 0;
-  font-family: Inter, Arial, sans-serif;
-  background-color: #ffffff;
-  color: #111111;
+  font-family: 'Inter', Arial, sans-serif;
+  background: #fff;
+  color: #111;
   text-align: center;
 }
 
+a { text-decoration: none; }
+
+/* HERO */
 .hero {
-  padding: 90px 20px;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
 }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 18px;
-  max-width: 600px;
-  margin: 0 auto 30px;
-}
-
+.hero h1 { font-size: 50px; margin-bottom: 15px; }
+.hero p { font-size: 20px; max-width: 600px; margin: 0 auto 30px; }
 .btn {
   display: inline-block;
   padding: 15px 30px;
-  background-color: #000000;
-  color: #ffffff;
-  text-decoration: none;
+  background: #00bfff;
+  color: #fff;
   border-radius: 6px;
-  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
 }
+.btn:hover { background: #009acd; }
 
-.services, .process, .contact {
-  padding: 70px 20px;
+/* SERVICES */
+.services { padding: 80px 20px; background: #f9f9f9; }
+.services h2 { font-size: 36px; margin-bottom: 50px; }
+.service-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
-
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.service-cards .card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+.service-cards img { width: 100%; border-radius: 6px; }
+.service-cards h3 { margin: 15px 0 10px; }
+.service-cards p { font-size: 16px; color: #555; }
 
-ul {
-  list-style: none;
-  padding: 0;
+/* PLANS */
+.plans { padding: 80px 20px; }
+.plans h2 { font-size: 36px; margin-bottom: 50px; }
+.plan-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
-
-ul li {
-  font-size: 18px;
-  margin: 10px 0;
+.plan {
+  background: #fff;
+  border-radius: 8px;
+  padding: 30px 20px;
+  width: 250px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+.plan.popular { border: 2px solid #00bfff; }
+.plan h3 { font-size: 24px; margin-bottom: 10px; }
+.plan p { font-weight: bold; margin-bottom: 15px; }
+.plan ul { list-style: none; padding: 0; font-size: 16px; color: #555; }
+.plan ul li { margin-bottom: 8px; }
 
+/* CONTACT */
+.contact { padding: 80px 20px; background: #f9f9f9; }
+.contact h2 { font-size: 36px; margin-bottom: 20px; }
+.contact p { font-size: 18px; margin: 10px 0; }
+
+/* FOOTER */
 footer {
   padding: 30px 10px;
-  background: #f5f5f5;
+  background: #222;
+  color: #fff;
   font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .service-cards, .plan-cards { flex-direction: column; align-items: center; }
 }
